@@ -1,0 +1,504 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-size: 5000% 500%;
+    background-image: linear-gradient(-45deg, #374cc5, #315fb3, #bf44c3, #54cfa6);
+    animation: move-background 30s linear infinite;
+}
+
+@keyframes move-background {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* блок хейдер */
+
+header {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.h__wrapper {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 25px 0px 0px 0px;
+}
+
+.h__menu {
+}
+.h__menu-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+.menu__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__items a {
+    color: white;
+    margin-right: 55px;
+    font-size: 20px;
+    font-family: "Source Serif Pro", serif;
+    letter-spacing: 1px;
+}
+
+.menu__contacts {
+}
+.menu__contacts-number {
+    color: white;
+    margin-right: 55px;
+    font-size: 24px;
+    font-family: "Source Serif Pro", serif;
+    letter-spacing: 1px;
+}
+.menu__contacts-text {
+    color: rgb(226, 226, 226);
+    margin-right: 55px;
+    font-size: 16px;
+    font-family: "Source Serif Pro", serif;
+    letter-spacing: 1px;
+}
+.h__logo {
+    width: 300px;
+    margin: 50px auto;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(73, 73, 73, 0.76);
+    border-radius: 50%;
+    margin: 0px 0px 0px 100px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.under__logo {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: "Source Serif Pro", serif;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+}
+
+.under__logo::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+.under__logo::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 165px;
+    right: 0;
+}
+
+.h__content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(
+        15deg,
+        rgba(255, 0, 0, 0.623),
+        rgba(128, 128, 128, 0.61),
+        rgba(225, 0, 255, 0.671)
+    );
+    border-radius: 8px;
+    height: 600px;
+    position: relative;
+}
+
+/* до наведения на область */
+
+.h__content-img {
+    transition: all 0.5s ease 0.2s;
+    width: 0px;
+    height: 0px;
+    background-image: linear-gradient(45deg, rgba(250, 100, 100, 0.61), rgba(148, 241, 148, 0.568), rgb(235, 114, 225));
+    border-radius: 50%;
+    box-shadow: 15px 20px 30px rgba(138, 207, 212, 0.616);
+    margin: 280px 0px 0px 280px;
+}
+
+.img__razers-1 {
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    left: 200px;
+    transition: all 0.5s ease 0s;
+}
+
+.img__razers-2 {
+    position: absolute;
+    display: inline-block;
+    bottom: 80px;
+    left: 80px;
+    transition: all 0.5s ease 0s;
+}
+
+.img__razers-3 {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 25px;
+    transition: all 0.5s ease 0s;
+}
+
+/* после наведения на область */
+
+.h__content-img.active {
+    width: 450px;
+    height: 450px;
+    background-image: linear-gradient(45deg, rgba(250, 100, 100, 0.61), rgba(148, 241, 148, 0.568), rgb(235, 114, 225));
+    border-radius: 50%;
+    box-shadow: 15px 20px 30px rgba(138, 207, 212, 0.616);
+    margin: 80px 0px 0px 80px;
+    transition: all 0.5s ease 0s;
+}
+
+.img__razers-1.active {
+    position: absolute;
+    display: inline-block;
+    top: 45px;
+    left: 52px;
+    transition: all 0.5s ease 0s;
+}
+
+.img__razers-2.active {
+    position: absolute;
+    display: inline-block;
+    bottom: 140px;
+    left: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+.img__razers-3.active {
+    position: absolute;
+    display: inline-block;
+    bottom: 126px;
+    left: 51px;
+    transition: all 0.5s ease 0s;
+}
+
+.h__content-img img {
+    max-width: 40%;
+    display: block;
+}
+
+.h__container-about-img {
+}
+.h__container-about-img-header {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-top: 20%;
+    margin-right: 10px;
+}
+
+.h__container-about-img-header h1 {
+    letter-spacing: 2px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.h__container-about-img-header h2 {
+    letter-spacing: 1px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.h__container-about-img-footer {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    line-height: 20px;
+    margin-top: 62px;
+}
+.last__ceil {
+    color: rgb(165, 165, 165);
+    font-size: 24px;
+    position: relative;
+}
+
+.last__ceil::before {
+    position: absolute;
+    content: "";
+    width: 130px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    top: 10px;
+    left: 0;
+}
+
+.new__ceil {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+}
+.buy__button {
+    color: white;
+    padding: 10px 25px;
+    background-image: linear-gradient(50deg, rgb(129, 22, 22), rgb(66, 64, 216));
+    font-size: 40px;
+    text-transform: uppercase;
+    border-radius: 14px;
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
+    transition: all 0.4s ease 0.1s;
+}
+
+.buy__button:hover {
+    color: white;
+    padding: 12px 27px;
+    background-image: linear-gradient(50deg, rgb(180, 23, 23), rgb(58, 55, 236));
+    box-shadow: 8px 8px 15px rgba(162, 0, 255, 0.541);
+    font-size: 42px;
+    text-transform: uppercase;
+    border-radius: 14px;
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
+    transition: all 0.4s ease 0.1s;
+}
+
+@media (max-width: 770px) {
+    body.active {
+        overflow: hidden;
+    }
+
+    .h__wrapper {
+        max-width: 770px;
+        margin: 0 auto;
+        padding: 25px 0px 0px 0px;
+        position: relative;
+    }
+
+    .h__menu {
+    }
+
+    .h__wrapper .h__menu.active {
+        position: fixed;
+        height: 500px;
+        width: 100%;
+        background-color: rgba(3, 3, 3, 0.774);
+        z-index: 999;
+    }
+
+    .h__menu-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 25px;
+    }
+
+    .menu__burger {
+        margin-top: 20px;
+        position: relative;
+        content: "";
+        width: 50px;
+        height: 5px;
+        background-color: white;
+    }
+
+    .menu__burger::before {
+        content: "";
+        width: 50px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: 15px;
+    }
+
+    .menu__burger::after {
+        content: "";
+        width: 50px;
+        height: 5px;
+        position: absolute;
+        background-color: white;
+        bottom: 15px;
+    }
+
+    .menu__items {
+        display: none;
+        /* margin-top: 50px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between; */
+    }
+
+    .h__menu.active .menu__items {
+        margin-top: 100px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    .menu__items a {
+        color: white;
+        margin-right: 0px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+        font-size: 38px;
+        font-family: "Source Serif Pro", serif;
+        letter-spacing: 1px;
+    }
+
+    .menu__items a p {
+        display: inline-block;
+        padding: 7px;
+        background-color: rgba(185, 84, 131, 0.657);
+        border-radius: 14px;
+    }
+
+    .finger {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -50px;
+        left: -15px;
+        z-index: 5;
+    }
+
+    .menu__contacts-number {
+        color: white;
+        margin-right: 55px;
+        font-size: 38px;
+        font-family: "Source Serif Pro", serif;
+        letter-spacing: 1px;
+    }
+    .menu__contacts-text {
+        color: rgb(226, 226, 226);
+        margin-right: 55px;
+        font-size: 24px;
+        font-family: "Source Serif Pro", serif;
+        letter-spacing: 1px;
+    }
+
+    .mobile__wrapper-h-logo {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .logo img {
+        width: 200px;
+        height: 200px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .under__logo {
+        color: rgb(255, 255, 255);
+        font-size: 34px;
+        font-family: "Source Serif Pro", serif;
+        letter-spacing: 1px;
+        text-align: center;
+        position: relative;
+    }
+
+    .name-site {
+        font-size: 44px;
+    }
+
+    .under__logo::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .under__logo::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        bottom: 370px;
+        right: 0;
+    }
+
+    /* до действий */
+
+    .h__content-img {
+        transition: all 0.5s ease 0.2s;
+        width: 150px;
+        height: 150px;
+        background-image: linear-gradient(
+            45deg,
+            rgba(250, 100, 100, 0.61),
+            rgba(148, 241, 148, 0.568),
+            rgb(235, 114, 225)
+        );
+        border-radius: 50%;
+        box-shadow: 15px 20px 350px rgba(138, 207, 212, 0.616);
+        margin: 200px 150px 0px 100px;
+    }
+
+    .img__razers-1 {
+        position: absolute;
+        display: inline-block;
+        top: 150px;
+        left: 50px;
+        transition: all 0.5s ease 0s;
+        z-index: 0;
+    }
+
+    .img__razers-2 {
+        position: absolute;
+        display: inline-block;
+        bottom: 170px;
+        left: 40px;
+        transition: all 0.5s ease 0s;
+        z-index: 0;
+    }
+
+    .img__razers-3 {
+        position: absolute;
+        display: inline-block;
+        bottom: 160px;
+        left: 45px;
+        transition: all 0.5s ease 0s;
+        z-index: 0;
+    }
+
+}
