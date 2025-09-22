@@ -14,9 +14,11 @@ a {
 }
 
 body {
+    background-color: black;
     background-image: url('./images/photos/background.jpg');
-    background-size: 110%;
-    background-position: center;
+    background-size: 250%;
+    background-repeat: no-repeat;
+    background-position: top;
     color: rgb(255, 255, 255);
     width: 100%;
     font-family: "Sansation", sans-serif;
@@ -171,6 +173,7 @@ footer {
     background-size: 120%;
     border-radius: 12px;
     transition: 2s;
+    background-position: center;
 }
 .social:hover {
     background-size: 150%;
@@ -328,6 +331,14 @@ main {
 
 @media screen and (width < 923px) {
 
+body {
+    background-color: black;
+    background-image: url('./images/photos/background.jpg');
+    background-size: 500%;
+    background-position: top;
+    background-repeat: no-repeat;
+    }
+
 header {
     grid-area: header;
     padding: 7px;
@@ -377,6 +388,15 @@ footer {
 
 
 @media screen and (width < 685px) {
+    
+    body {
+    background-color: black;
+    background-image: url('./images/photos/background.jpg');
+    background-size: 500%;
+    background-position: top;
+    background-repeat: no-repeat;
+    }
+    
     header {
         grid-template-areas: 
     "name_shop"
