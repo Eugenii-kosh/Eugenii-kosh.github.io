@@ -1,0 +1,459 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+body {
+    background-image: url('./images/photos/background.jpg');
+    background-size: 110%;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    font-family: "Sansation", sans-serif;
+}
+
+/* параметры иконок */
+
+.tel_img, .vk_img {
+    display: block;
+    max-width: 35px;
+    transition: 1s;
+}
+.tel_img:hover, .vk_img:hover {
+    max-width: 50px;
+    transition: 1s;
+}
+.CHEK {
+    max-width: 30px;
+    margin: 12px;
+}
+.phone_logo {
+    max-width: 34px;
+    padding: 3px;
+    transition: 2s;
+}
+.phone_logo:hover {
+    transform: rotate(1turn);
+    transition: 2s;
+}
+
+
+
+
+
+/* главный контейнер */
+
+.main_container {
+    max-width: 1650px;
+    margin: 5px auto;
+    padding: 3px;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+
+header {
+    grid-area: header;
+    padding: 7px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+    "name_shop name_shop boss"
+    "posicion_shop phone_nambers social"
+    "work_week_shop work_week_shop work_week_shop";
+}
+
+main {
+    grid-area: main;
+    padding: 7px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+    "wrk wrk"
+    "s1 s2"
+    "s3 s4"
+    "s5 s6";
+}
+
+footer {
+    grid-area: footer;
+    padding: 7px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+    "fb fn fs";
+}
+
+
+/* настройка внутри header блока */
+
+.name_shop {
+    grid-area: name_shop;
+    display: block;
+    margin: 12px;
+    background-color: brown;
+    text-align: center;
+    background-color: yellow;
+    border-radius: 12px;
+    box-shadow: 22px 14px 22px rgba(251, 255, 0, 0.404);
+}
+.name_shop h1 {
+    font-size: 82px;
+    color: rgb(53, 53, 53);
+    letter-spacing: 10px;
+    text-shadow: 5px 5px 12px rgb(95, 95, 95);
+}
+.name_shop h1::after {
+    position: relative;
+    display: block;
+    content: ' ';
+    height: 3px;
+    width: 60%;
+    background-color: black;
+    left: 18%;
+
+}
+.name_shop p {
+    font-size: 28px;
+    padding: 5px;
+    color: rgb(32, 32, 32);
+    font-weight: 500;
+}
+
+
+
+.boss {
+    grid-area: boss;
+    display: block;
+    margin: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+
+.phone_numbers {
+    grid-area: phone_nambers;
+    display: block;
+    margin: 12px;
+    text-align: right;
+    font-size: 26px;
+    font-weight: 600;
+}
+.phone_numbers li a {
+    margin: 7px;
+    transition: 1s;
+}
+.phone_numbers li a:hover {
+    color: rgb(255, 251, 193);
+    transition: 1s;
+}
+
+.social {
+    grid-area: social;
+    display: block;
+    margin: 12px;
+    background: url('./images/backgrounds/background_social.jpg');
+    background-size: 120%;
+    border-radius: 12px;
+    transition: 2s;
+}
+.social:hover {
+    background-size: 150%;
+    transition: 2s;
+}
+.tg {
+    display: block;
+    margin: 12px;
+    max-width: 50px;
+}
+.vk {
+    display: block;
+    margin: 12px;
+    max-width: 50px;
+}
+
+
+.posicion_shop {
+    grid-area: posicion_shop;
+    display: block;
+    margin: 12px;
+    background: url('./images/backgrounds/background_posicion.jpg');
+    text-align: center;
+    background-size: 100%;
+    background-position: 12px;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: 600;
+}
+.posicion_shop p {
+    margin: 12px;
+}
+.posicion_shop a {
+    margin: 6px;
+    padding: 7px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 0, 0, 0.658);
+    border-radius: 7px;
+    transition: 0.5s;
+}
+.posicion_shop a:hover {
+    background-color: red;
+    transition: 0.5s;
+}
+
+.work_week_shop {
+    grid-area: work_week_shop;
+    display: block;
+    margin: 12px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+
+
+/* блок с услугами */
+
+
+main {
+    font-size: 22px;
+}
+
+.service {
+    grid-area: wrk;
+    text-align: center;
+    margin: 6px;
+    font-size: 24px;
+}
+
+.con_service1 {
+    padding: 4px;
+    grid-area: s1;
+    margin: 12px;
+    background-color: rgba(253, 228, 0, 0.411);
+    padding: 15px;
+    border-radius: 12px;
+}
+.con_service2 {
+    padding: 4px;
+    grid-area: s2;
+    margin: 12px;
+    background-color: rgba(253, 228, 0, 0.411);
+    padding: 15px;
+    border-radius: 12px;
+}
+.con_service3 {
+    padding: 4px;
+    grid-area: s3;
+    margin: 12px;
+    background-color: rgba(121, 109, 0, 0.411);
+    padding: 15px;
+    border-radius: 12px;
+}
+.con_service4 {
+    padding: 4px;
+    grid-area: s4;
+    margin: 12px;
+    background-color: rgba(121, 109, 0, 0.411);
+    padding: 15px;
+    border-radius: 12px;
+}
+.con_service5 {
+    padding: 4px;
+    grid-area: s5;
+    margin: 12px;
+    background-color: rgba(61, 55, 0, 0.411);
+    padding: 15px;
+    border-radius: 12px;
+}
+.con_service6 {
+    padding: 4px;
+    grid-area: s6;
+    margin: 12px;
+    background-color: rgba(71, 64, 0, 0.411);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+
+
+/* блок футера */
+
+
+
+.fboss {
+    grid-area: fb;
+    text-align: center;
+    margin: 10px;
+    font-size: 22px;
+}
+.ftelephon_numbers {
+    grid-area: fn;
+    text-align: right;
+    margin: 8px;
+    padding: 7px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.fsocial {
+    grid-area: fs;
+    margin: 7px;
+    padding: 8px;
+}
+
+
+
+
+/* адаптивная часть */
+
+
+
+@media screen and (width < 923px) {
+
+header {
+    grid-area: header;
+    padding: 7px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+    "name_shop name_shop "
+    "posicion_shop boss"
+    "posicion_shop phone_nambers"
+    "posicion_shop social"
+    "work_week_shop work_week_shop ";
+}
+
+.posicion_shop {
+    text-align: start;
+    font-size: 26px;
+}
+.posicion_shop a {
+    margin: 12px;
+}
+
+
+main {
+    grid-area: main;
+    padding: 7px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+    "wrk wrk"
+    "s1 s2"
+    "s3 s4"
+    "s5 s6";
+}
+
+footer {
+    grid-area: footer;
+    padding: 7px;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: 
+    "fb fn fs";
+}
+
+
+    
+}
+
+
+@media screen and (width < 685px) {
+    header {
+        grid-template-areas: 
+    "name_shop"
+    "boss"
+    "phone_nambers"
+    "social"
+    "posicion_shop"
+    "work_week_shop";
+    }
+    .phone_numbers {
+        text-align: center;
+        font-size: 34px;
+    }
+    .social {
+        display: flex;
+        justify-content: space-around;
+        background-size: 100%;
+        background-position: right;
+    }
+    .tel_img, .vk_img {
+    display: block;
+    max-width: 50px;
+    transition: 1s;
+    }
+    .tel_img:hover, .vk_img:hover {
+    max-width: 50px;
+    transition: 1s;
+    }
+    .posicion_shop {
+        min-height: 180px;
+        text-align: center;
+        font-size: 30px;
+    }     
+
+    main {
+        font-size: 30px;
+        grid-template-areas: 
+        "wrk"
+        "s1"
+        "s2"
+        "s3"
+        "s4"
+        "s5"
+        "s6";
+        }
+    footer {
+        grid-template-areas: 
+        "fn fs"
+        "fb fb";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
